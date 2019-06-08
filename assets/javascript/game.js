@@ -13,6 +13,11 @@ var losses = 0;
 var lossesElement = document.getElementById("loss-count");
 var wins = 0;
 var winsElement = document.getElementById("win-count");
+var crystal1Info = document.getElementById("crystal1-info");
+var crystal2Info = document.getElementById("crystal2-info");
+var crystal3Info = document.getElementById("crystal3-info");
+var crystal4Info = document.getElementById("crystal4-info");
+var hasBeenClicked = 0;
 //gets a random number between 12 and 1, then pushes the value to numberArray, 4 times
 var randomCrystalValue = function() {
   for (var i = 0; i < 4; i++) {
@@ -35,6 +40,7 @@ console.log("randomNumber = " + randomNumber);
 
 //on click events for the buttons
 $("#crystal1").on("click", function() {
+  hasBeenClicked = hasBeenClicked + 1;
   var numberValue = numberArray[0];
   addedNumberValue = addedNumberValue + numberValue;
   addedNumberElement.innerHTML = addedNumberValue;
@@ -60,11 +66,15 @@ $("#crystal1").on("click", function() {
     document.getElementById("crystal5").style.display = "block";
   }
   if (wins % 5 != 0 && wins > 0) {
-    document.getElementById("crystal5").style.display = "none";
-
+    $("#crystal5").fadeOut();
   }
+  if (wins >= 5 && hasBeenClicked > 1) {
+    $("#crystal5").hide();
+  }
+  console.log(hasBeenClicked);
 });
 $("#crystal2").on("click", function() {
+  hasBeenClicked = hasBeenClicked + 1;
   var numberValue = numberArray[1];
   addedNumberValue = addedNumberValue + numberValue;
   addedNumberElement.innerHTML = addedNumberValue;
@@ -90,11 +100,15 @@ $("#crystal2").on("click", function() {
     document.getElementById("crystal5").style.display = "block";
   }
   if (wins % 5 != 0 && wins > 0) {
-    document.getElementById("crystal5").style.display = "none";
-
+    $("#crystal5").fadeOut();
   }
+  if (wins >= 5 && hasBeenClicked > 1) {
+    $("#crystal5").hide();
+  }
+  console.log(hasBeenClicked);
 });
 $("#crystal3").on("click", function() {
+  hasBeenClicked = hasBeenClicked + 1;
   var numberValue = numberArray[2];
   addedNumberValue = addedNumberValue + numberValue;
   addedNumberElement.innerHTML = addedNumberValue;
@@ -120,11 +134,15 @@ $("#crystal3").on("click", function() {
     document.getElementById("crystal5").style.display = "block";
   }
   if (wins % 5 != 0 && wins > 0) {
-    document.getElementById("crystal5").style.display = "none";
-
+    $("#crystal5").fadeOut();
   }
+  if (wins >= 5 && hasBeenClicked > 1) {
+    $("#crystal5").hide();
+  }
+  console.log(hasBeenClicked);
 });
 $("#crystal4").on("click", function() {
+  hasBeenClicked = hasBeenClicked + 1;
   var numberValue = numberArray[3];
   addedNumberValue = addedNumberValue + numberValue;
   addedNumberElement.innerHTML = addedNumberValue;
@@ -150,11 +168,24 @@ $("#crystal4").on("click", function() {
     document.getElementById("crystal5").style.display = "block";
   }
   if (wins % 5 != 0 && wins > 0) {
-    document.getElementById("crystal5").style.display = "none";
-
+    $("#crystal5").fadeOut();
   }
+  if (wins >= 5 && hasBeenClicked > 1) {
+    $("#crystal5").hide();
+  }
+  console.log(hasBeenClicked);
 });
 $("#crystal5").on("click", function() {
   $("#crystal5").fadeOut();
+  crystal1Info.innerHTML = numberArray[0];
+  $("#crystal1-info").show().delay(3000).fadeOut();
 
+  crystal2Info.innerHTML = numberArray[1];
+  $("#crystal2-info").show().delay(3000).fadeOut();
+
+  crystal3Info.innerHTML = numberArray[2];
+  $("#crystal3-info").show().delay(3000).fadeOut();
+
+  crystal4Info.innerHTML = numberArray[3];
+  $("#crystal4-info").show().delay(3000).fadeOut();
 });
