@@ -2,21 +2,41 @@
 <head>
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Cantarell&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
+<div id="container">
+<p id="info">The goal of this game is to reach the number in green. Each crystal has a random value between 1 and 12. 
+    Click each crystal to figure out its value. If the number in yellow is the same as the number in green, you win!.
+    If you go over the number, you lose. Every 5 wins something fun happens.
+</p>
 <div id="number-box"></div>
-<div id="added-numbers"></div>
+<div id="added-numbers">0</div>
 <div id="win-loss">
-    <div>You have lost: <span id="loss-count"></span></div>
-    <div>You have Won: <span id="win-count"></span></div>
-</div>
-<div id="crystal-container">
-    <img src="assets/images/red-crystal.png" id="crystal1">
-    <img src="assets/images/blue-crystal.png" id="crystal2">
-    <img src="assets/images/green-crystal.png" id="crystal3">
-    <img src="assets/images/purple-crystal.png" id="crystal4"></div>
+        <div>You have lost: <span id="loss-count"></span></div>
+        <div>You have Won: <span id="win-count"></span></div>
+    </div>
+<div id="flex-container">
+    <div class="crystal-div">
+        <img src="assets/images/red-crystal.png" class="crystal" id="crystal1">
+        <div class="crystal-info" id="crystal1-info">a</div>
+    </div>
+    <div class="crystal-div">
+        <img src="assets/images/blue-crystal.png" class="crystal" id="crystal2">
+        <div class="crystal-info" id="crystal2-info">a</div>
+    </div>
+    <div class="crystal-div">
+        <img src="assets/images/green-crystal.png" class="crystal" id="crystal3">
+        <div class="crystal-info" id="crystal3-info">a</div>
+    </div>
+    <div class="crystal-div">
+        <img src="assets/images/purple-crystal.png" class="crystal" id="crystal4">
+        <div class="crystal-info" id="crystal4-info">a</div>
+    </div>
+    <img src="assets/images/multi-colored-crystal.png" class="crystal" id="crystal5">
 </div>
 
+</div>
 <script src="assets/javascript/game.js"></script>
 </html>

@@ -1,51 +1,79 @@
 html {
     background-color: black;
+    font-family: 'Cantarell', sans-serif;
+}
+#container {
+    width: 600px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 2.5%;
+    text-align: center;
 }
 #number-box {
-    height: 200px; 
-    width: 250px;
-    background-color: lightgreen;
+    margin-top: 5%;
+    color: #00ff0c;
+    font-size: 30px;
 }
 #added-numbers {
+    margin-top: 5%;
+    color: yellow;
+    font-size: 30px;
+}
+.crystal {
+    height: 150px; 
+    width: 150px;
+}
+.crystal-info {
+    width: 100px;
+    height: 20px;
+    position: absolute;
+    background-color: black;
+    color: #00ff0c;
+}
+#crystal1-info {
+    margin-left: 28px;
+}
+#crystal2-info {
+    margin-left: 28px;
+}
+#crystal3-info {
+    margin-left: 28px;
+}
+#crystal4-info {
+    margin-left: 28px;
+}
+#flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+}
+#crystal5 {
+    display: none;
+    margin-left: 34%;
     height: 200px;
-    width: 250px;
-    background-color: yellow;
+    width: 200px;
 }
-#crystal1 {
-    height: 100px; 
-    width: 100px;
-    background-color: blue;
+#info {
     color: white;
-}
-#crystal2 {
-    height: 100px; 
-    width: 100px;
-    background-color: lightcoral;
-    color: white;
-}
-#crystal3 {
-    height: 100px; 
-    width: 100px;
-    background-color: lightseagreen;
-    color: white;
-}
-#crystal4 {
-    height: 100px; 
-    width: 100px;
-    background-color: gray;
-    color: white;
+    width: 600px;
+    line-height: 1.5;
+    margin-left: auto;
+    margin-right: auto;
 }
 #win-loss {
-    position: absolute;
-    margin-left: 250px;
-    margin-top: -400px;
     width: 200px;
-    background-color: blueviolet;
+    color: rgb(247, 0, 255);
     font-size: 20px;
-    padding: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
 }
-#crystal-container {
-    display: flex;
-    background-color: black;
-    width: 400px;
+#loss-count {
+    color: #ff0000;
+}
+#win-count {
+    color: #00ff0c;
 }

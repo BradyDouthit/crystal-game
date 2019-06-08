@@ -26,8 +26,13 @@ var randomCrystalValue = function() {
 
 randomCrystalValue();
 
+
+
 console.log("addedNumberValue = " + addedNumberValue); 
 console.log("randomNumber = " + randomNumber); 
+
+
+
 //on click events for the buttons
 $("#crystal1").on("click", function() {
   var numberValue = numberArray[0];
@@ -41,7 +46,7 @@ $("#crystal1").on("click", function() {
     randomNumber = getRandomNumber();
     addedNumberValue = 0; 
     addedNumberElement.innerHTML = "";
-  }
+  };
   if (addedNumberValue == randomNumber) {
     wins = wins + 1;
     winsElement.innerHTML = wins + " time(s)";
@@ -51,7 +56,7 @@ $("#crystal1").on("click", function() {
     addedNumberValue = 0; 
     addedNumberElement.innerHTML = "";
   }
-})
+});
 $("#crystal2").on("click", function() {
   var numberValue = numberArray[1];
   addedNumberValue = addedNumberValue + numberValue;
@@ -64,7 +69,7 @@ $("#crystal2").on("click", function() {
     randomNumber = getRandomNumber();
     addedNumberValue = 0; 
     addedNumberElement.innerHTML = "";
-  }
+  };
   if (addedNumberValue == randomNumber) {
     wins = wins + 1;
     winsElement.innerHTML = wins + " time(s)";
@@ -74,7 +79,7 @@ $("#crystal2").on("click", function() {
     addedNumberValue = 0; 
     addedNumberElement.innerHTML = "";
   }
-})
+});
 $("#crystal3").on("click", function() {
   var numberValue = numberArray[2];
   addedNumberValue = addedNumberValue + numberValue;
@@ -87,7 +92,7 @@ $("#crystal3").on("click", function() {
     randomNumber = getRandomNumber();
     addedNumberValue = 0; 
     addedNumberElement.innerHTML = "";
-  }
+  };
   if (addedNumberValue == randomNumber) {
     wins = wins + 1;
     winsElement.innerHTML = wins + " time(s)";
@@ -97,7 +102,7 @@ $("#crystal3").on("click", function() {
     addedNumberValue = 0; 
     addedNumberElement.innerHTML = "";
   }
-})
+});
 $("#crystal4").on("click", function() {
   var numberValue = numberArray[3];
   addedNumberValue = addedNumberValue + numberValue;
@@ -110,7 +115,7 @@ $("#crystal4").on("click", function() {
     randomNumber = getRandomNumber();
     addedNumberValue = 0; 
     addedNumberElement.innerHTML = "";
-  }
+  };
   if (addedNumberValue == randomNumber) {
     wins = wins + 1;
     winsElement.innerHTML = wins + " time(s)";
@@ -120,4 +125,10 @@ $("#crystal4").on("click", function() {
     addedNumberValue = 0; 
     addedNumberElement.innerHTML = "";
   }
-})
+  if (losses < 10) {
+    document.getElementById("crystal5").style.display = "block";
+  }
+});
+$("#crystal5").on("click", function() {
+  
+});
