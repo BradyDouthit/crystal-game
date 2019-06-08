@@ -56,6 +56,13 @@ $("#crystal1").on("click", function() {
     addedNumberValue = 0; 
     addedNumberElement.innerHTML = "";
   }
+  if (wins % 5 === 0 && wins > 0) {
+    document.getElementById("crystal5").style.display = "block";
+  }
+  if (wins % 5 != 0 && wins > 0) {
+    document.getElementById("crystal5").style.display = "none";
+
+  }
 });
 $("#crystal2").on("click", function() {
   var numberValue = numberArray[1];
@@ -78,6 +85,13 @@ $("#crystal2").on("click", function() {
     randomNumber = getRandomNumber();
     addedNumberValue = 0; 
     addedNumberElement.innerHTML = "";
+  }
+  if (wins % 5 === 0 && wins > 0) {
+    document.getElementById("crystal5").style.display = "block";
+  }
+  if (wins % 5 != 0 && wins > 0) {
+    document.getElementById("crystal5").style.display = "none";
+
   }
 });
 $("#crystal3").on("click", function() {
@@ -102,6 +116,13 @@ $("#crystal3").on("click", function() {
     addedNumberValue = 0; 
     addedNumberElement.innerHTML = "";
   }
+  if (wins % 5 === 0 && wins > 0) {
+    document.getElementById("crystal5").style.display = "block";
+  }
+  if (wins % 5 != 0 && wins > 0) {
+    document.getElementById("crystal5").style.display = "none";
+
+  }
 });
 $("#crystal4").on("click", function() {
   var numberValue = numberArray[3];
@@ -125,10 +146,15 @@ $("#crystal4").on("click", function() {
     addedNumberValue = 0; 
     addedNumberElement.innerHTML = "";
   }
-  if (losses < 10) {
+  if (wins % 5 === 0 && wins > 0) {
     document.getElementById("crystal5").style.display = "block";
+  }
+  if (wins % 5 != 0 && wins > 0) {
+    document.getElementById("crystal5").style.display = "none";
+
   }
 });
 $("#crystal5").on("click", function() {
-  
+  $("#crystal5").fadeOut();
+
 });

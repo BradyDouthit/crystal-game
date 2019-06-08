@@ -29,6 +29,8 @@ html {
     position: absolute;
     background-color: black;
     color: #00ff0c;
+    z-index: 1;
+    display: none;
 }
 #crystal1-info {
     margin-left: 28px;
@@ -55,6 +57,7 @@ html {
     margin-left: 34%;
     height: 200px;
     width: 200px;
+    padding-right: 50px;
 }
 #info {
     color: white;
