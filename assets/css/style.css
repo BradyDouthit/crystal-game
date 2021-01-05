@@ -23,6 +23,11 @@ html {
     height: 150px; 
     width: 150px;
 }
+
+.crystal:hover {
+    cursor: pointer;
+}
+
 .crystal-info {
     width: 100px;
     height: 20px;
